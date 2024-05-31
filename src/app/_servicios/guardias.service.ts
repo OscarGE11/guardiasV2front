@@ -17,5 +17,7 @@ export class GuardiasService {
     return this.http.get<Guardias[]>(`${this.url}`);
   }
 
-  
+  altaGuardia(guardia:Guardias){
+    return this.http.post<Guardias>(this.url,guardia);
+  }
 }

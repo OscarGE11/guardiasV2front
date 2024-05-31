@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 import { Usuario } from '../_modelos/Usuario';
-import { JwtAuthenticationResponse } from '../_modelos/_seguridad/JwtAuthenticationResponse';
-import { entorno } from '../_modelos/_seguridad/entorno';
+
+
 
 
 @Injectable({
@@ -25,7 +25,7 @@ export class UsuarioService {
   }
   
   alta(u: Usuario) {
-    return this.http.post<JwtAuthenticationResponse>(`${entorno.HOSTNAME}/auth/signup`, u);
+    return this.http.post<Usuario>(`${this.url}`, u);
   }
   
   modificar(u: Usuario) {
