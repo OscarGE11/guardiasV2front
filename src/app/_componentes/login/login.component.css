@@ -1,0 +1,46 @@
+a{
+    text-decoration: none;
+}
+
+input{
+    width: 170%;
+    color: #ccc;
+    font-size: 15px;
+}
+
+.botoncin{
+    border-radius: 6px;
+    border: solid 0px green;
+    background-color: #07A87B;
+    padding: 5px 20px;
+    color: white;
+    font-weight: 600;
+    transition: ease 200ms;
+}
+
+.botoncin:hover{
+    opacity: 90%;
+    transform: scale(1.05);
+}
+
+.card-fomulario{
+    padding: 40px;
+    border-radius: 16px;
+    min-width: 400px;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.1),  /* Capa más cercana */
+        0 8px 16px rgba(0, 0, 0, 0.1), /* Capa intermedia */
+        0 16px 32px rgba(0, 0, 0, 0.1),/* Capa más lejana */
+        0 32px 64px rgba(0, 0, 0, 0.05);/* Capa adicional para profundidad */
+    background-color: #507191;
+    color: #fff;
+}
+
+.fomulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-subtitle{
+    color: #fff !important;
+}

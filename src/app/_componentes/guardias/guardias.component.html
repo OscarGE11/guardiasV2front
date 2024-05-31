@@ -1,0 +1,53 @@
+
+
+
+
+
+
+<form [formGroup]="form" #frmusuario="ngForm" (ngSubmit)="crearGuardia()">
+    
+        <label>Usuario: <select formControlName="id_usuario">
+            @for (item of arrayUsuarios; track $index) {
+                <option [value]="item.id_usuario">{{item.nombre}}</option>
+            }
+        </select></label>
+        <br> 
+        <label>Hora: <select formControlName="hora">
+            @for (item of horas; track $index) {
+                <option [value]="item">{{item}}</option>
+            }
+        </select></label>
+        <br>
+        <label>Dia de la semana: <select formControlName="dia_semana">
+            @for (item of diasDeLaSemana; track $index) {
+                <option [value]="item">{{item}}</option>
+            }
+        </select></label><br>
+        <label for="">Aula: <input type="text" formControlName="aula"></label><br>
+        
+        
+
+
+        <button>Crear Guardia</button>
+
+    
+</form>
+
+<br>
+
+@for (item of arrayGuardias; track $index) {
+    <p>Guardia numero {{$index}}</p>
+    <br>
+
+    <p>{{item.hora}}</p>
+    <p>{{item.aula}}</p>
+    <p>{{item.dia_semana}}</p>
+    
+<br><br>
+    <p>Usuario al que pertenece la guardia:</p><br><br>
+    <p>{{item.usuario.email}}</p>
+    <p>{{item.usuario.id_usuario}}</p>
+    <p>{{item.usuario.nombre}}</p>
+    <p>{{item.usuario.rol}}</p>
+    <p>--------------------</p>
+}

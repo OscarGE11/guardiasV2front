@@ -1,0 +1,11 @@
+<form [formGroup]="form" #frmusuario="ngForm" (ngSubmit)="registrar()">
+    <input name="nombre" type="text" class="form-control" required formControlName="nombre" placeholder="Nombre de usuario*" (keydown.enter)="registrar()">
+    <br>
+    <input name="email" type="email" class="form-control" required formControlName="email" placeholder="email@domain.com*" (keydown.enter)="registrar()">
+    <br>
+    <input name="pw1" type="password" class="form-control" required formControlName="pw1" placeholder="Contraseña*" (keydown.enter)="registrar()">
+    <br>
+    <input name="pw2" type="password" class="form-control" required formControlName="pw2" placeholder="Confirma contraseña*" (keydown.enter)="registrar()">
+    <br>
+    <button type="submit" [disabled]="frmusuario.invalid" class="botoncin" >Registrarse</button>
+</form>
